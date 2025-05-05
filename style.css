@@ -3,6 +3,7 @@ body{
     min-height: 100vh;
     margin: 0;
     padding: 20px;
+    font-family: Arial, Helvetica, sans-serif
 
 }
 
@@ -95,3 +96,40 @@ h2{
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+#guide{
+    height: 600px;
+}
+
+
+#boton-reiniciar{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:beige;
+    height: 50px;
+    width: 120px;
+    align-items: center;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    animation-name: zoom;
+    animation-duration: 1.5s;
+}
+
+@keyframes zoom {
+    from{
+        height: 0px;
+        width: 0px;
+        font-size: 0px;
+    }
+    to{
+        height: 50px;
+        width: 120px;
+        font-size: 20px;
+    }
+}
+
