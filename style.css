@@ -25,10 +25,10 @@ h2{
 
 .contenedor-principal {
     display: flex;
-    justify-content: center;
     gap: 50px;
-    margin-top: 30px;
+    margin-top: 30px;        
     align-items: center;
+    justify-content: center;
 }
 
 #buttons{
@@ -44,6 +44,10 @@ h2{
     border-radius: 25px;
     border: black;
     border-style: solid;
+    margin-right: 0%;
+    margin-left: 20%;
+    animation-name: slide-left-button;
+    animation-duration: 1s; 
 }
 
 #piedra, #papel, #tijeras, #lagarto, #spock {
@@ -58,26 +62,51 @@ h2{
 #piedra {
     background-color: rgba(169, 169, 169, 0.7);
     border: 2px solid #4a4a4a;
+    animation-name: slide-left;
+    animation-duration: 1s;
 }
 
 #papel {
     background-color: rgba(255, 255, 255, 0.7);
     border: 2px solid #666;
+    animation-name: slide-left;
+    animation-duration: 1.2s;
 }
 
 #tijeras {
     background-color: rgba(192, 192, 192, 0.7);
     border: 2px solid #444;
+    animation-name: slide-left;
+    animation-duration: 1.4s;
 }
 
 #lagarto {
     background-color: rgba(144, 238, 144, 0.7);
     border: 2px solid #2e8b57;
+    animation-name: slide-left;
+    animation-duration: 1.6s;
 }
 
 #spock {
     background-color: rgba(135, 206, 235, 0.7);
     border: 2px solid #4682b4;
+    animation-name: slide-left;
+    animation-duration: 1.8s;
+}
+
+@keyframes slide-left {
+    from{
+        margin-left: -250%;
+    }to{
+        margin-left: 0% ;
+    }
+}
+@keyframes slide-left-button {
+    from{
+        margin-left: -250%;
+    }to{
+        margin-left: 20% ;
+    }
 }
 
 #Mensajes{
@@ -95,10 +124,17 @@ h2{
     padding: 20px;
     overflow-y: auto;
     overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: zoom-mensajes;
+    animation-duration: 2s;
 }
 
 #guide{
     height: 600px;
+    margin-right: 7%;
+    animation-name: zoom-image;
+    animation-duration: 1.5s;
 }
 
 
@@ -127,9 +163,30 @@ h2{
         font-size: 0px;
     }
     to{
-        height: 50px;
-        width: 120px;
+        height: 50PX;
+        width: 120PX;
         font-size: 20px;
+    }
+}
+
+@keyframes zoom-mensajes {
+    from{
+        height: 0px;
+        width: 0px;
+    }
+    to{
+        height: 500PX;
+        width: 400PX;
+    }
+}
+
+@keyframes zoom-image {
+    from{
+        height: 0px;
+        opacity: 0;
+    }to{
+        height: 600px;
+        opacity: 1;
     }
 }
 
