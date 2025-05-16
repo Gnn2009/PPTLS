@@ -87,6 +87,8 @@ function mensajeFinal(mensaje){
     parrafo.innerHTML = mensaje;
     sectionMensajes.appendChild(parrafo);
 
+    sectionMensajes.scrollTop = sectionMensajes.scrollHeight;
+
     let piedra = document.getElementById("piedra");
     piedra.disabled = true;
     let papel = document.getElementById("papel");

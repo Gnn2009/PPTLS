@@ -126,12 +126,12 @@ h2{
     overflow-x: hidden;
     margin-left: auto;
     margin-right: auto;
-    animation-name: zoom-mensajes;
+    animation-name: scrollToTop;
     animation-duration: 2s;
 }
 
 #guide{
-    height: 600px;
+    height: 300px;
     margin-right: 7%;
     animation-name: zoom-image;
     animation-duration: 1.5s;
@@ -169,7 +169,7 @@ h2{
     }
 }
 
-@keyframes zoom-mensajes {
+@keyframes scrollToTop {
     from{
         height: 0px;
         width: 0px;
@@ -185,7 +185,7 @@ h2{
         height: 0px;
         opacity: 0;
     }to{
-        height: 600px;
+        height: 300px;
         opacity: 1;
     }
 }
